@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/fill.wav-d9721ae6d09e91070e42b3ebdec35ba7.sample"
+
+[deps]
+
+source_file="res://sound/bucket/fill.wav"
+dest_files=[ "res://.import/fill.wav-d9721ae6d09e91070e42b3ebdec35ba7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

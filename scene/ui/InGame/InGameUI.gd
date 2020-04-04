@@ -6,6 +6,8 @@ var yellowBucketButtonClass = preload("res://scene/ui/YellowBucketButton/YellowB
 var blueBucketButtonClass = preload("res://scene/ui/BlueBucketButton/BlueBucketButton.tscn")
 
 onready var world = get_node("../..")
+onready var fillBucketSoundEffect = get_node("FillBucketSound")
+onready var emptyBucketSoundEffect = get_node("EmptyBucketSound")
 
 const buttonMarginSize = 15
 const buttonSpacing = 52
@@ -22,12 +24,16 @@ func bucketButtonPressed(button, paintColour):
 		if not paintColour == currentPaintArea.paintColour and "white" in [paintColour, currentPaintArea.paintColour]:
 			if currentPaintArea.paintColour == "white":
 				addButton(emptyBucketButtonClass.instance(), button.hotkey, button.rect_position)
+				emptyBucketSoundEffect.play()
 			elif currentPaintArea.paintColour == "red":
 				addButton(redBucketButtonClass.instance(), button.hotkey, button.rect_position)
+				fillBucketSoundEffect.play()
 			elif currentPaintArea.paintColour == "yellow":
 				addButton(yellowBucketButtonClass.instance(), button.hotkey, button.rect_position)
+				fillBucketSoundEffect.play()
 			elif currentPaintArea.paintColour == "blue":
 				addButton(blueBucketButtonClass.instance(), button.hotkey, button.rect_position)
+				fillBucketSoundEffect.play()
 			currentPaintArea.setPaintColour(paintColour)
 			remove_child(button)
 			

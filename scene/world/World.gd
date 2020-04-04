@@ -1,6 +1,7 @@
 extends Node2D
 
 var inGameUIClass = preload("res://scene/ui/InGame/InGameUI.tscn")
+var victoryMenuClass = preload("res://scene/ui/Victory/Victory.tscn")
 
 var levelClasses = [
 	preload("res://scene/level/1/Level1.tscn"),
@@ -9,10 +10,12 @@ var levelClasses = [
 ]
 
 onready var gui = get_node("GUI")
+onready var victorySoundEffect = get_node("VictorySoundEffect")
 
 var currentLevel = null
 var inGameUI = null
 var currentLevelIndex = 0
+var victory = false
 
 func _ready():
 	currentLevel = levelClasses[currentLevelIndex].instance()
@@ -20,26 +23,42 @@ func _ready():
 	createInGameUI()
 
 func _process(delta):
-	if Input.is_action_just_pressed("next_level"):
+	if Input.is_action_just_pressed("restart_level"):
+		restartLevel()
+	elif Input.is_action_just_pressed("next_level"):
 		advanceLevel()
 		
-	var satisfiesVictoryCondition = true
-	for node in currentLevel.get_children():
-		if node is StaticBody2D and node.isSplash():
-			if not node.correctColour:
-				satisfiesVictoryCondition = false
-	if satisfiesVictoryCondition:
-		advanceLevel()
+	if not victory:
+		var satisfiesVictoryCondition = true
+		for node in currentLevel.get_children():
+			if node is StaticBody2D and node.isSplash():
+				if not node.correctColour:
+					satisfiesVictoryCondition = false
+		if satisfiesVictoryCondition:
+			victory()
+		
+func victory():
+	victory = true
+	victorySoundEffect.play()
+	gui.add_child(victoryMenuClass.instance())
 		
 func advanceLevel():
-	remove_child(currentLevel)
+	victory = false
+	currentLevel.queue_free()
 	currentLevelIndex += 1
 	if currentLevelIndex >= len(levelClasses):
 		currentLevelIndex = 0
 	currentLevel = levelClasses[currentLevelIndex].instance()
 	add_child(currentLevel)
 	
-	remove_child(inGameUI)
+	inGameUI.queue_free()
+	createInGameUI()
+	
+func restartLevel():
+	currentLevel.queue_free()
+	currentLevel = levelClasses[currentLevelIndex].instance()
+	add_child(currentLevel)
+	
 	inGameUI.queue_free()
 	createInGameUI()
 	

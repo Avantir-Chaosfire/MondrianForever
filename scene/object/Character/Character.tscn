@@ -1,8 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://image/bucky/idle.png" type="Texture" id=1]
 [ext_resource path="res://scene/object/Character/Character.gd" type="Script" id=2]
 [ext_resource path="res://image/bucky/jump.png" type="Texture" id=3]
+[ext_resource path="res://sound/bucky/jump.wav" type="AudioStream" id=4]
+[ext_resource path="res://sound/bucky/land.wav" type="AudioStream" id=5]
+[ext_resource path="res://sound/bucky/swim/1.wav" type="AudioStream" id=6]
+[ext_resource path="res://sound/bucky/swim/2.wav" type="AudioStream" id=7]
+[ext_resource path="res://sound/bucky/swim/3.wav" type="AudioStream" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -38,3 +43,28 @@ collision_mask = 0
 [node name="Hitbox" type="CollisionShape2D" parent="BucketTarget"]
 scale = Vector2( 1e-05, 1e-05 )
 shape = SubResource( 3 )
+
+[node name="JumpSoundEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="LandSoundEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = 2.0
+pitch_scale = 0.5
+
+[node name="Swim1SoundEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -1.0
+
+[node name="Swim2SoundEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+pitch_scale = 0.5
+
+[node name="Swim3SoundEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -1.0
+
+[node name="SwimSoundTimer" type="Timer" parent="."]
+wait_time = 1.05
+autostart = true
+[connection signal="timeout" from="SwimSoundTimer" to="." method="_on_SwimSoundTimer_timeout"]
