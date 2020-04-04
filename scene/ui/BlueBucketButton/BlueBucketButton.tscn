@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://image/bucket/blue/pressed.png" type="Texture" id=1]
+[ext_resource path="res://image/bucket/blue/hover.png" type="Texture" id=2]
+[ext_resource path="res://image/bucket/blue/normal.png" type="Texture" id=3]
+[ext_resource path="res://scene/ui/BlueBucketButton/BlueBucketButton.gd" type="Script" id=4]
+
+[node name="BlueBucketButton" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 4 )
+
+[node name="Button" type="TextureButton" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 2 )
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

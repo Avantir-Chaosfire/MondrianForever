@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 onready var sprite = get_node("Sprite")
+onready var bucketTarget = get_node("BucketTarget")
 
 var acceleration = 100
 var maxMovementSpeed = 210
@@ -99,3 +100,9 @@ func getOverlappingPaintColours():
 		if node is Area2D and node.isPaintArea() and node.overlaps_body(self):
 			colours.append(node.paintColour)
 	return colours
+	
+func getCurrentPaintArea():
+	for node in get_parent().get_children():
+		if node is Area2D and node.isPaintArea() and node.overlaps_area(bucketTarget):
+			return node
+	return null

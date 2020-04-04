@@ -26,7 +26,9 @@ func getBorderDistance(direction):
 	borderDetector.cast_to = direction * rayCastDistance
 	borderDetector.force_raycast_update()
 	if borderDetector.is_colliding():
-		return (position - get_parent().to_local(borderDetector.get_collision_point())).length()
+		var borderScale = borderDetector.get_collider().scale
+		var rayCastVector = position - get_parent().to_local(borderDetector.get_collision_point())
+		return rayCastVector.length() + (borderScale.project(rayCastVector).length() / 2)
 	return 0
 
 func setPaintColour(newPaintColour):
