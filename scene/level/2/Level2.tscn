@@ -80,19 +80,19 @@ scale = Vector2( 5, 330 )
 
 [node name="VerticalBorder4" parent="Borders" instance=ExtResource( 2 )]
 position = Vector2( 514.783, 359.117 )
-scale = Vector2( 5, 1000 )
+scale = Vector2( 5, 800 )
 
 [node name="VerticalBorder8" parent="Borders" instance=ExtResource( 2 )]
 position = Vector2( 1014.78, 359.117 )
-scale = Vector2( 5, 1000 )
+scale = Vector2( 5, 850 )
 
 [node name="VerticalBorder5" parent="Borders" instance=ExtResource( 2 )]
-position = Vector2( 811.457, 62.4688 )
-scale = Vector2( 5, 400 )
+position = Vector2( 811.457, 105 )
+scale = Vector2( 5, 310 )
 
 [node name="VerticalBorder6" parent="Borders" instance=ExtResource( 2 )]
-position = Vector2( 629.783, 61.1167 )
-scale = Vector2( 5, 400 )
+position = Vector2( 629.783, 110 )
+scale = Vector2( 5, 300 )
 
 [node name="VerticalBorder9" parent="Borders" instance=ExtResource( 2 )]
 position = Vector2( 261.959, 660.869 )
@@ -108,7 +108,7 @@ scale = Vector2( 5, 1000 )
 
 [node name="Wall2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1014.78, 359.117 )
-scale = Vector2( 5, 1000 )
+scale = Vector2( 5, 850 )
 
 [node name="PaintArea" parent="." instance=ExtResource( 3 )]
 position = Vector2( 262.923, 120.28 )
