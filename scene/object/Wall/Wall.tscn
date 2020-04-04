@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="Wall" type="StaticBody2D"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+scale = Vector2( 0.05, 0.05 )
+shape = SubResource( 1 )

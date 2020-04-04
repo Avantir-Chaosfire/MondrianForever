@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scene/object/HorizontalBorder/HorizontalBorder.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scene/object/VerticalBorder/VerticalBorder.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene/object/PaintArea/PaintArea.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scene/object/Character/Character.tscn" type="PackedScene" id=4]
+[ext_resource path="res://image/bucky_idle.png" type="Texture" id=5]
+[ext_resource path="res://scene/object/Wall/Wall.tscn" type="PackedScene" id=6]
+
+[node name="Level1" type="Node2D"]
+
+[node name="PaintArea" parent="." instance=ExtResource( 3 )]
+position = Vector2( 576, 211 )
+
+[node name="PaintArea3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 53.7834, 225.729 )
+
+[node name="Character" parent="." instance=ExtResource( 4 )]
+position = Vector2( 125.424, 507.193 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 24.4605, 569.901 )
+texture = ExtResource( 5 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 25.237, 515.16 )
+texture = ExtResource( 5 )
+
+[node name="Borders" type="Node2D" parent="."]
+
+[node name="HorizontalBorder1" parent="Borders" instance=ExtResource( 1 )]
+position = Vector2( 512, 600 )
+scale = Vector2( 1024, 5 )
+
+[node name="HorizontalBorder2" parent="Borders" instance=ExtResource( 1 )]
+position = Vector2( 512, 0 )
+scale = Vector2( 1024, 5 )
+
+[node name="VerticalBorder1" parent="Borders" instance=ExtResource( 2 )]
+position = Vector2( 0, 300 )
+scale = Vector2( 5, 600 )
+
+[node name="VerticalBorder2" parent="Borders" instance=ExtResource( 2 )]
+position = Vector2( 1024, 300 )
+scale = Vector2( 5, 600 )
+
+[node name="VerticalBorder3" parent="Borders" instance=ExtResource( 2 )]
+position = Vector2( 120, 300 )
+scale = Vector2( 5, 600 )
+
+[node name="VerticalBorder4" parent="Borders" instance=ExtResource( 2 )]
+position = Vector2( 410, 300 )
+scale = Vector2( 5, 600 )
+
+[node name="Wall" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0, 300 )
+scale = Vector2( 5, 600 )
+
+[node name="Wall2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1024, 300 )
+scale = Vector2( 5, 600 )
