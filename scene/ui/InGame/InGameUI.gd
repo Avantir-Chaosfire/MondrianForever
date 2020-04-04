@@ -12,24 +12,26 @@ const buttonSpacing = 52
 
 func setAvailableBuckets(amount):
 	for i in range(amount):
-		addButton(emptyBucketButtonClass.instance(), Vector2(buttonMarginSize + (buttonSpacing * i), buttonMarginSize))
+		var hotkey = "bucket_" + str(i + 1)
+		addButton(emptyBucketButtonClass.instance(), hotkey, Vector2(buttonMarginSize + (buttonSpacing * i), buttonMarginSize))
 		
 func bucketButtonPressed(button, paintColour):
 	var character = world.getCharacter()
 	var currentPaintArea = character.getCurrentPaintArea()
 	if not currentPaintArea == null:
-		if not paintColour == currentPaintArea.paintColour:
+		if not paintColour == currentPaintArea.paintColour and "white" in [paintColour, currentPaintArea.paintColour]:
 			if currentPaintArea.paintColour == "white":
-				addButton(emptyBucketButtonClass.instance(), button.rect_position)
+				addButton(emptyBucketButtonClass.instance(), button.hotkey, button.rect_position)
 			elif currentPaintArea.paintColour == "red":
-				addButton(redBucketButtonClass.instance(), button.rect_position)
+				addButton(redBucketButtonClass.instance(), button.hotkey, button.rect_position)
 			elif currentPaintArea.paintColour == "yellow":
-				addButton(yellowBucketButtonClass.instance(), button.rect_position)
+				addButton(yellowBucketButtonClass.instance(), button.hotkey, button.rect_position)
 			elif currentPaintArea.paintColour == "blue":
-				addButton(blueBucketButtonClass.instance(), button.rect_position)
+				addButton(blueBucketButtonClass.instance(), button.hotkey, button.rect_position)
 			currentPaintArea.setPaintColour(paintColour)
 			remove_child(button)
 			
-func addButton(button, position):
+func addButton(button, hotkey, position):
 	button.rect_position = position
+	button.hotkey = hotkey
 	add_child(button)
