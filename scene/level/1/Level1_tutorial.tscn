@@ -50,10 +50,6 @@ scale = Vector2( 150, 5 )
 position = Vector2( 893.892, 113.004 )
 scale = Vector2( 150, 5 )
 
-[node name="HorizontalBorder11" parent="Borders" instance=ExtResource( 1 )]
-position = Vector2( 893.892, 113.004 )
-scale = Vector2( 150, 5 )
-
 [node name="HorizontalBorder12" parent="Borders" instance=ExtResource( 1 )]
 position = Vector2( 1125.69, 208.954 )
 scale = Vector2( 125, 5 )
