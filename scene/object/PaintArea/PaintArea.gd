@@ -8,6 +8,7 @@ const rayCastDistance = 4000
 
 var paintColour = "white"
 var wall = null
+var splash = null
 
 func _ready():
 	var negativeXDistance = getBorderDistance(Vector2(-1, 0))
@@ -21,6 +22,25 @@ func _ready():
 	scale.y = positiveYDistance + negativeYDistance
 	
 	borderDetector.enabled = false
+	
+func _process(delta):
+	if not paintColour == "black" and splash == null:
+		splash = getSplash()
+		if not splash == null:
+			splash.position = position
+			
+	if not splash == null:
+		if paintColour == splash.getPaintColour():
+			splash.nowCorrectColour()
+		else:
+			splash.nowIncorrectColour()
+
+func getSplash():
+	var bodies = get_overlapping_bodies()
+	for body in bodies:
+		if body is StaticBody2D and body.isSplash():
+			return body
+	return null
 
 func getBorderDistance(direction):
 	borderDetector.cast_to = direction * rayCastDistance

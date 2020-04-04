@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scene/object/HorizontalBorder/HorizontalBorder.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scene/object/VerticalBorder/VerticalBorder.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scene/object/PaintArea/PaintArea.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scene/object/Character/Character.tscn" type="PackedScene" id=4]
+[ext_resource path="res://image/bucky/idle.png" type="Texture" id=5]
 [ext_resource path="res://scene/object/Wall/Wall.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scene/object/BlackPaintArea/BlackPaintArea.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scene/object/BluePaintArea/BluePaintArea.tscn" type="PackedScene" id=8]
@@ -16,6 +17,14 @@ script = ExtResource( 11 )
 
 [node name="Character" parent="." instance=ExtResource( 4 )]
 position = Vector2( 69.6524, 555.428 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 24.4605, 569.901 )
+texture = ExtResource( 5 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 25.237, 515.16 )
+texture = ExtResource( 5 )
 
 [node name="Borders" type="Node2D" parent="."]
 

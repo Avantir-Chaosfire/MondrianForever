@@ -19,6 +19,11 @@ config/name="Mondrian Forever"
 run/main_scene="res://scene/world/World.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=1600
+window/size/height=900
+
 [input]
 
 ui_accept={
@@ -113,6 +118,7 @@ move_down={
 2d_physics/layer_1="HorizontalBorder"
 2d_physics/layer_2="VerticalBorder"
 2d_physics/layer_3="Character"
+2d_physics/layer_4="Splash"
 
 [rendering]
 

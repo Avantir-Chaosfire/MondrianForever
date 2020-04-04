@@ -23,6 +23,14 @@ func _process(delta):
 	if Input.is_action_just_pressed("next_level"):
 		advanceLevel()
 		
+	var satisfiesVictoryCondition = true
+	for node in currentLevel.get_children():
+		if node is StaticBody2D and node.isSplash():
+			if not node.correctColour:
+				satisfiesVictoryCondition = false
+	if satisfiesVictoryCondition:
+		advanceLevel()
+		
 func advanceLevel():
 	remove_child(currentLevel)
 	currentLevelIndex += 1
