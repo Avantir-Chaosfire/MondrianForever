@@ -6,6 +6,7 @@ onready var bucketTarget = get_node("BucketTarget")
 onready var jumpSoundEffect = get_node("JumpSoundEffect")
 onready var landSoundEffect = get_node("LandSoundEffect")
 onready var swimSoundEffect = get_node("Swim2SoundEffect")
+onready var bucketPickupSoundEffect = get_node("BucketPickupSoundEffect")
 
 const acceleration = 100
 const maxMovementSpeed = 210
@@ -120,4 +121,5 @@ func _on_SwimSoundTimer_timeout():
 		swimSoundEffect.play()
 		
 func collectBucket():
+	bucketPickupSoundEffect.play()
 	world.addBucket()
