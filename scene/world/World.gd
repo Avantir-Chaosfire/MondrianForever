@@ -44,6 +44,7 @@ func victory():
 		
 func advanceLevel():
 	victory = false
+	remove_child(currentLevel)
 	currentLevel.queue_free()
 	currentLevelIndex += 1
 	if currentLevelIndex >= len(levelClasses):
@@ -51,14 +52,17 @@ func advanceLevel():
 	currentLevel = levelClasses[currentLevelIndex].instance()
 	add_child(currentLevel)
 	
+	gui.remove_child(inGameUI)
 	inGameUI.queue_free()
 	createInGameUI()
 	
 func restartLevel():
+	remove_child(currentLevel)
 	currentLevel.queue_free()
 	currentLevel = levelClasses[currentLevelIndex].instance()
 	add_child(currentLevel)
 	
+	gui.remove_child(inGameUI)
 	inGameUI.queue_free()
 	createInGameUI()
 	
