@@ -4,7 +4,7 @@ onready var sprite = get_node("Sprite")
 
 var acceleration = 100
 var maxMovementSpeed = 210
-var initialJumpSpeed = 380
+var initialJumpSpeed = 430
 var yellowJumpSpeedMultiplier = 1.45
 var friction = 50
 var gravity = 19.6
