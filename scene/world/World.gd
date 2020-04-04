@@ -31,6 +31,7 @@ func advanceLevel():
 	add_child(currentLevel)
 	
 	remove_child(inGameUI)
+	inGameUI.queue_free()
 	createInGameUI()
 	
 func getCharacter():
@@ -38,5 +39,5 @@ func getCharacter():
 	
 func createInGameUI():
 	inGameUI = inGameUIClass.instance()
-	inGameUI.setAvailableBuckets(3)
+	inGameUI.setAvailableBuckets(currentLevel.availableBucketCount)
 	gui.add_child(inGameUI)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scene/object/HorizontalBorder/HorizontalBorder.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scene/object/VerticalBorder/VerticalBorder.tscn" type="PackedScene" id=2]
@@ -10,8 +10,10 @@
 [ext_resource path="res://scene/object/BluePaintArea/BluePaintArea.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scene/object/RedPaintArea/RedPaintArea.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scene/object/YellowPaintArea/YellowPaintArea.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scene/level/1/Level1.gd" type="Script" id=11]
 
 [node name="Level1" type="Node2D"]
+script = ExtResource( 11 )
 
 [node name="Character" parent="." instance=ExtResource( 4 )]
 position = Vector2( 125.424, 507.193 )
