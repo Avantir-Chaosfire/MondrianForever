@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+onready var sprite = get_node("Sprite")
+
 var acceleration = 100
 var maxMovementSpeed = 210
 var initialJumpSpeed = 380
@@ -33,10 +35,15 @@ func _physics_process(delta):
 	if onGround and Input.is_action_just_pressed("jump"):
 		velocity.y = -initialJumpSpeed
 
-	var willCollide = test_move(transform, velocity * delta)
+	var willCollide = test_move(transform, Vector2(0, velocity.y) * delta)
 	move_and_slide(velocity)
 	if willCollide:
 		velocity.y = 0
 		onGround = true
 	else:
 		onGround = false
+		
+	if onGround:
+		sprite.frame = 0
+	else:
+		sprite.frame = 1
