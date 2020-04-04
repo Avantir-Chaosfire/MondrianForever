@@ -23,9 +23,9 @@ func _ready():
 	createInGameUI()
 
 func _process(delta):
-	if Input.is_action_just_pressed("restart_level"):
+	if Input.is_action_just_released("restart_level"):
 		restartLevel()
-	elif Input.is_action_just_pressed("next_level"):
+	elif Input.is_action_just_released("next_level"):
 		advanceLevel()
 		
 	if not victory:

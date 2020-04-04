@@ -4,6 +4,7 @@ onready var world = get_node("../..")
 onready var sprite = get_node("Sprite")
 onready var bucketTarget = get_node("BucketTarget")
 onready var jumpSoundEffect = get_node("JumpSoundEffect")
+onready var cantJumpSoundEffect = get_node("CantJumpSoundEffect")
 onready var landSoundEffect = get_node("LandSoundEffect")
 onready var swimSoundEffect = get_node("Swim2SoundEffect")
 onready var bucketPickupSoundEffect = get_node("BucketPickupSoundEffect")
@@ -56,11 +57,14 @@ func processWalking(delta, paintColours):
 	
 	velocity.y += gravity
 
-	if onGround and Input.is_action_just_pressed("jump") and not "red" in paintColours:
-		jumpSoundEffect.play()
-		velocity.y = -initialJumpSpeed
-		if "yellow" in paintColours:
-			velocity.y *= yellowJumpSpeedMultiplier
+	if onGround and Input.is_action_just_pressed("jump"):
+		if "red" in paintColours:
+			cantJumpSoundEffect.play()
+		else:
+			jumpSoundEffect.play()
+			velocity.y = -initialJumpSpeed
+			if "yellow" in paintColours:
+				velocity.y *= yellowJumpSpeedMultiplier
 	
 func applyHorizontalFriction():
 	if abs(velocity.x) < friction:

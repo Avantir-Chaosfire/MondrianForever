@@ -49,3 +49,6 @@ func addBucket():
 	var hotkey = "bucket_" + str(bucketCount + 1)
 	addButton(emptyBucketButtonClass.instance(), hotkey, Vector2(buttonMarginSize + (buttonSpacing * bucketCount), buttonMarginSize))
 	bucketCount += 1
+
+func _on_RestartButton_pressed():
+	world.restartLevel()
