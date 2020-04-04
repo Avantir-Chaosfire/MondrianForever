@@ -66,17 +66,17 @@ scale = Vector2( 5, 600 )
 position = Vector2( 1024, 300 )
 scale = Vector2( 5, 600 )
 
-[node name="BlackPaintArea" parent="." instance=ExtResource( 7 )]
-position = Vector2( 253.074, 251.735 )
+[node name="RedPaintArea" parent="." instance=ExtResource( 9 )]
+position = Vector2( 890.022, 120.606 )
 
 [node name="PaintArea" parent="." instance=ExtResource( 3 )]
-position = Vector2( 30.7974, 141.936 )
+position = Vector2( 45.7164, 156.96 )
 
-[node name="BluePaintArea" parent="." instance=ExtResource( 8 )]
-position = Vector2( 735.12, 408.4 )
-
-[node name="RedPaintArea" parent="." instance=ExtResource( 9 )]
-position = Vector2( 562.387, 97.7482 )
+[node name="BlackPaintArea" parent="." instance=ExtResource( 7 )]
+position = Vector2( 659.382, 467.292 )
 
 [node name="YellowPaintArea" parent="." instance=ExtResource( 10 )]
-position = Vector2( 881.073, 108.46 )
+position = Vector2( 342.919, 186.16 )
+
+[node name="BluePaintArea" parent="." instance=ExtResource( 8 )]
+position = Vector2( 556.399, 123.024 )

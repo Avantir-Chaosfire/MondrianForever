@@ -5,6 +5,7 @@ onready var sprite = get_node("Sprite")
 var acceleration = 100
 var maxMovementSpeed = 210
 var initialJumpSpeed = 380
+var yellowJumpSpeedMultiplier = 1.45
 var friction = 50
 var gravity = 19.6
 
@@ -12,31 +13,16 @@ var velocity = Vector2()
 var onGround = false
 
 func _physics_process(delta):
-	if abs(velocity.x) < friction:
-		velocity.x = 0
-	elif velocity.x > 0:
-		velocity.x -= friction
-	else:
-		velocity.x += friction
-		
-	velocity.y += gravity
+	var paintColours = getOverlappingPaintColours()
 	
-	if Input.is_action_pressed("move_left") and not Input.is_action_pressed("move_right"):
-		velocity.x -= acceleration
-	elif Input.is_action_pressed("move_right") and not Input.is_action_pressed("move_left"):
-		velocity.x += acceleration
+	if "blue" in paintColours:
+		processSwimming(delta)
+	else:
+		processWalking(delta, paintColours)
 		
-	if abs(velocity.x) > maxMovementSpeed:
-		if velocity.x > 0:
-			velocity.x = maxMovementSpeed
-		else:
-			velocity.x = -maxMovementSpeed
-
-	if onGround and Input.is_action_just_pressed("jump"):
-		velocity.y = -initialJumpSpeed
-
 	var willCollide = test_move(transform, Vector2(0, velocity.y) * delta)
-	move_and_slide(velocity)
+	velocity = move_and_slide(velocity)
+	
 	if willCollide:
 		velocity.y = 0
 		onGround = true
@@ -47,3 +33,69 @@ func _physics_process(delta):
 		sprite.frame = 0
 	else:
 		sprite.frame = 1
+		
+func processSwimming(delta):
+	applyHorizontalFriction()
+	moveHorizontally()
+	
+	applyVerticalFriction()
+	moveVertically()
+	
+func processWalking(delta, paintColours):
+	applyHorizontalFriction()
+	moveHorizontally()
+	
+	velocity.y += gravity
+
+	if onGround and Input.is_action_just_pressed("jump") and not "red" in paintColours:
+		velocity.y = -initialJumpSpeed
+		if "yellow" in paintColours:
+			velocity.y *= yellowJumpSpeedMultiplier
+	
+func applyHorizontalFriction():
+	if abs(velocity.x) < friction:
+		velocity.x = 0
+	elif velocity.x > 0:
+		velocity.x -= friction
+	else:
+		velocity.x += friction
+	
+func applyVerticalFriction():
+	if abs(velocity.y) < friction:
+		velocity.y = 0
+	elif velocity.y > 0:
+		velocity.y -= friction
+	else:
+		velocity.y += friction
+		
+func moveHorizontally():
+	if Input.is_action_pressed("move_left") and not Input.is_action_pressed("move_right"):
+		velocity.x -= acceleration
+	elif Input.is_action_pressed("move_right") and not Input.is_action_pressed("move_left"):
+		velocity.x += acceleration
+		
+	if abs(velocity.x) > maxMovementSpeed:
+		if velocity.x > 0:
+			velocity.x = maxMovementSpeed
+		else:
+			velocity.x = -maxMovementSpeed
+		
+func moveVertically():
+	var moveUp = Input.is_action_pressed("move_up") or Input.is_action_pressed("jump")
+	if moveUp and not Input.is_action_pressed("move_down"):
+		velocity.y -= acceleration
+	elif Input.is_action_pressed("move_down") and not moveUp:
+		velocity.y += acceleration
+		
+	if abs(velocity.y) > maxMovementSpeed:
+		if velocity.y > 0:
+			velocity.y = maxMovementSpeed
+		else:
+			velocity.y = -maxMovementSpeed
+
+func getOverlappingPaintColours():
+	var colours = []
+	for node in get_parent().get_children():
+		if node is Area2D and node.isPaintArea() and node.overlaps_body(self):
+			colours.append(node.paintColour)
+	return colours

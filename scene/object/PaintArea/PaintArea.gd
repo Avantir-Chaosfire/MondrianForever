@@ -1,10 +1,13 @@
 extends Area2D
 
+var wallClass = preload("res://scene/object/Wall/Wall.tscn")
+
 onready var borderDetector = get_node("BorderDetector")
 
 const rayCastDistance = 4000
 
 var paintColour = "white"
+var wall = null
 
 func _ready():
 	var negativeXDistance = getBorderDistance(Vector2(-1, 0))
@@ -27,14 +30,26 @@ func getBorderDistance(direction):
 	return 0
 
 func setPaintColour(newPaintColour):
+	if paintColour == "black":
+		get_parent().remove_child(wall)
+		z_index = -1
+	
 	paintColour = newPaintColour
 	if paintColour == "white":
 		modulate = Color("FFFFFF")
 	elif paintColour == "black":
 		modulate = Color("000000")
+		wall = wallClass.instance()
+		wall.position = position
+		wall.scale = scale
+		get_parent().add_child(wall)
+		z_index = 1
 	elif paintColour == "red":
 		modulate = Color("FF0E00")
 	elif paintColour == "blue":
 		modulate = Color("286FFE")
 	elif paintColour == "yellow":
 		modulate = Color("FAFF08")
+		
+func isPaintArea():
+	return true
