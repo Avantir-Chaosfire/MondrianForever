@@ -4,7 +4,8 @@ var inGameUIClass = preload("res://scene/ui/InGame/InGameUI.tscn")
 
 var levelClasses = [
 	preload("res://scene/level/1/Level1.tscn"),
-	preload("res://scene/level/1/Level1_tutorial.tscn")
+	preload("res://scene/level/1/Level1_tutorial.tscn"),
+	preload("res://scene/level/2/Level2.tscn"),
 ]
 
 onready var gui = get_node("GUI")
