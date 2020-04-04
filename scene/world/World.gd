@@ -73,3 +73,6 @@ func createInGameUI():
 	inGameUI = inGameUIClass.instance()
 	inGameUI.setAvailableBuckets(currentLevel.availableBucketCount)
 	gui.add_child(inGameUI)
+	
+func addBucket():
+	inGameUI.addBucket()

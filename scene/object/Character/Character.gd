@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+onready var world = get_node("../..")
 onready var sprite = get_node("Sprite")
 onready var bucketTarget = get_node("BucketTarget")
 onready var jumpSoundEffect = get_node("JumpSoundEffect")
@@ -117,3 +118,6 @@ func getCurrentPaintArea():
 func _on_SwimSoundTimer_timeout():
 	if "blue" in getOverlappingPaintColours():
 		swimSoundEffect.play()
+		
+func collectBucket():
+	world.addBucket()

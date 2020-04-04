@@ -12,8 +12,11 @@ onready var emptyBucketSoundEffect = get_node("EmptyBucketSound")
 const buttonMarginSize = 15
 const buttonSpacing = 52
 
+var bucketCount = 0
+
 func setAvailableBuckets(amount):
-	for i in range(amount):
+	bucketCount = amount
+	for i in range(bucketCount):
 		var hotkey = "bucket_" + str(i + 1)
 		addButton(emptyBucketButtonClass.instance(), hotkey, Vector2(buttonMarginSize + (buttonSpacing * i), buttonMarginSize))
 		
@@ -41,3 +44,8 @@ func addButton(button, hotkey, position):
 	button.rect_position = position
 	button.hotkey = hotkey
 	add_child(button)
+
+func addBucket():
+	var hotkey = "bucket_" + str(bucketCount + 1)
+	addButton(emptyBucketButtonClass.instance(), hotkey, Vector2(buttonMarginSize + (buttonSpacing * bucketCount), buttonMarginSize))
+	bucketCount += 1
