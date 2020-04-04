@@ -12,7 +12,7 @@
 [ext_resource path="res://scene/object/YellowPaintArea/YellowPaintArea.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scene/level/1/Level1.gd" type="Script" id=11]
 [ext_resource path="res://scene/object/YellowSplash/YellowSplash.tscn" type="PackedScene" id=12]
-[ext_resource path="res://scene/object/BlueSplash/BlueSplash.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scene/object/RedSplash/RedSplash.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scene/object/WhiteSplash/WhiteSplash.tscn" type="PackedScene" id=14]
 
 [node name="Level1" type="Node2D"]
@@ -87,10 +87,13 @@ position = Vector2( 553.139, 116.652 )
 position = Vector2( 315.663, 284.08 )
 
 [node name="YellowSplash" parent="." instance=ExtResource( 12 )]
-position = Vector2( 325.502, 488.254 )
+position = Vector2( 264.47, 283.12 )
 
 [node name="WhiteSplash" parent="." instance=ExtResource( 14 )]
-position = Vector2( 64.4224, 230.564 )
+position = Vector2( 859.53, 166.142 )
 
-[node name="BlueSplash" parent="." instance=ExtResource( 13 )]
-position = Vector2( 949.383, 149.189 )
+[node name="WhiteSplash2" parent="." instance=ExtResource( 14 )]
+position = Vector2( 55.9457, 337.37 )
+
+[node name="RedSplash" parent="." instance=ExtResource( 13 )]
+position = Vector2( 583.192, 155.97 )

@@ -1,3 +1,3 @@
 extends Node2D
 
-var availableBucketCount = 1
+var availableBucketCount = 2
