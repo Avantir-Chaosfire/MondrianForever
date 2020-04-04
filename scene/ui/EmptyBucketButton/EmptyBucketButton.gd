@@ -8,7 +8,7 @@ var normalTexture = null
 func _ready():
 	normalTexture = button.texture_normal
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_pressed(hotkey):
 		button.texture_normal = button.texture_pressed
 	else:

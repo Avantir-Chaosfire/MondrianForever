@@ -1,6 +1,6 @@
 extends Area2D
 
-func _process(delta):
+func _process(_delta):
 	for body in get_overlapping_bodies():
 		body.collectBucket()
 		get_parent().remove_child(self)

@@ -15,20 +15,20 @@ onready var victorySoundEffect = get_node("VictorySoundEffect")
 var currentLevel = null
 var inGameUI = null
 var currentLevelIndex = 0
-var victory = false
+var victorious = false
 
 func _ready():
 	currentLevel = levelClasses[currentLevelIndex].instance()
 	add_child(currentLevel)
 	createInGameUI()
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_released("restart_level"):
 		restartLevel()
 	elif Input.is_action_just_released("next_level"):
 		advanceLevel()
 		
-	if not victory:
+	if not victorious:
 		var satisfiesVictoryCondition = true
 		for node in currentLevel.get_children():
 			if node is StaticBody2D and node.isSplash():
@@ -38,12 +38,12 @@ func _process(delta):
 			victory()
 		
 func victory():
-	victory = true
+	victorious = true
 	victorySoundEffect.play()
 	gui.add_child(victoryMenuClass.instance())
 		
 func advanceLevel():
-	victory = false
+	victorious = false
 	remove_child(currentLevel)
 	currentLevel.queue_free()
 	currentLevelIndex += 1
@@ -57,6 +57,7 @@ func advanceLevel():
 	createInGameUI()
 	
 func restartLevel():
+	victorious = false
 	remove_child(currentLevel)
 	currentLevel.queue_free()
 	currentLevel = levelClasses[currentLevelIndex].instance()

@@ -23,7 +23,7 @@ func _ready():
 	
 	borderDetector.enabled = false
 	
-func _process(delta):
+func _process(_delta):
 	if not paintColour == "black" and splash == null:
 		splash = getSplash()
 		if not splash == null:

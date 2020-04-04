@@ -23,9 +23,9 @@ func _physics_process(delta):
 	var paintColours = getOverlappingPaintColours()
 	
 	if "blue" in paintColours:
-		processSwimming(delta)
+		processSwimming()
 	else:
-		processWalking(delta, paintColours)
+		processWalking(paintColours)
 		
 	var willCollide = test_move(transform, Vector2(0, velocity.y) * delta)
 	velocity = move_and_slide(velocity)
@@ -44,14 +44,14 @@ func _physics_process(delta):
 	else:
 		sprite.frame = 1
 		
-func processSwimming(delta):
+func processSwimming():
 	applyHorizontalFriction()
 	moveHorizontally()
 	
 	applyVerticalFriction()
 	moveVertically()
 	
-func processWalking(delta, paintColours):
+func processWalking(paintColours):
 	applyHorizontalFriction()
 	moveHorizontally()
 	
