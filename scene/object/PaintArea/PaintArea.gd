@@ -29,12 +29,12 @@ func getBorderDistance(direction):
 func setPaintColour(newPaintColour):
 	paintColour = newPaintColour
 	if paintColour == "white":
-		modulate = Color(255, 255, 255)
+		modulate = Color("FFFFFF")
 	elif paintColour == "black":
-		modulate = Color(0, 0, 0)
+		modulate = Color("000000")
 	elif paintColour == "red":
-		modulate = Color(255, 0, 0)
+		modulate = Color("FF0E00")
 	elif paintColour == "blue":
-		modulate = Color(0, 0, 255)
+		modulate = Color("286FFE")
 	elif paintColour == "yellow":
-		modulate = Color(255, 255, 0)
+		modulate = Color("FAFF08")
