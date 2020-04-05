@@ -1,12 +1,14 @@
 extends Control
 
 onready var button = get_node("Button")
+onready var hotkeyLabel = get_node("Button/Hotkey")
 
 var hotkey = ""
 var normalTexture = null
 
 func _ready():
 	normalTexture = button.texture_normal
+	hotkeyLabel.text = hotkey[len(hotkey) - 1]
 
 func _process(_delta):
 	if Input.is_action_pressed(hotkey):

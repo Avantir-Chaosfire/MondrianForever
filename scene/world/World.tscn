@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scene/world/World.gd" type="Script" id=1]
 [ext_resource path="res://image/dot.png" type="Texture" id=2]
 [ext_resource path="res://sound/victory.wav" type="AudioStream" id=3]
+[ext_resource path="res://sound/victory_final.wav" type="AudioStream" id=4]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 1 )
@@ -20,3 +21,6 @@ current = true
 
 [node name="VictorySoundEffect" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+
+[node name="FinalVictorySoundEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
