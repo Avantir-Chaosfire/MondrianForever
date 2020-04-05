@@ -18,157 +18,158 @@
 script = ExtResource( 5 )
 
 [node name="Character" parent="." instance=ExtResource( 4 )]
-position = Vector2( 718.947, 226.7 )
+position = Vector2( 565.309, 177.554 )
 
 [node name="Borders" type="Node2D" parent="."]
+position = Vector2( -153.529, -47.7645 )
 
 [node name="HorizontalBorder1" parent="Borders" instance=ExtResource( 1 )]
-position = Vector2( 648.644, 729.117 )
-scale = Vector2( 1300, 5 )
+position = Vector2( 510, 730 )
+scale = Vector2( 1025, 5 )
 
 [node name="HorizontalBorder3" parent="Borders" instance=ExtResource( 1 )]
-position = Vector2( 764.783, 259.561 )
-scale = Vector2( 500, 5 )
+position = Vector2( 765, 260 )
+scale = Vector2( 510, 5 )
 
 [node name="HorizontalBorder12" parent="Borders" instance=ExtResource( 1 )]
-position = Vector2( 616.783, 398.296 )
-scale = Vector2( 205, 5 )
+position = Vector2( 615, 400 )
+scale = Vector2( 210, 5 )
 
 [node name="HorizontalBorder11" parent="Borders" instance=ExtResource( 1 )]
-position = Vector2( 764.783, 589.117 )
-scale = Vector2( 500, 5 )
+position = Vector2( 765, 590 )
+scale = Vector2( 510, 5 )
 
 [node name="HorizontalBorder10" parent="Borders" instance=ExtResource( 1 )]
-position = Vector2( 257.362, 508.51 )
+position = Vector2( 255, 510 )
 scale = Vector2( 510, 5 )
 
 [node name="HorizontalBorder4" parent="Borders" instance=ExtResource( 1 )]
-position = Vector2( 720.783, 147.613 )
+position = Vector2( 720, 145 )
 scale = Vector2( 180, 5 )
 
 [node name="HorizontalBorder7" parent="Borders" instance=ExtResource( 1 )]
-position = Vector2( 51.7833, 435.703 )
-scale = Vector2( 180, 5 )
+position = Vector2( 72.5, 435 )
+scale = Vector2( 145, 5 )
 
 [node name="HorizontalBorder8" parent="Borders" instance=ExtResource( 1 )]
-position = Vector2( 51.7833, 474.193 )
-scale = Vector2( 180, 5 )
+position = Vector2( 72.5, 475 )
+scale = Vector2( 145, 5 )
 
 [node name="HorizontalBorder9" parent="Borders" instance=ExtResource( 1 )]
-position = Vector2( 214.783, 176 )
-scale = Vector2( 600, 5 )
+position = Vector2( 255, 175 )
+scale = Vector2( 510, 5 )
 
 [node name="HorizontalBorder5" parent="Borders" instance=ExtResource( 1 )]
-position = Vector2( 913.787, 61.9738 )
-scale = Vector2( 200, 5 )
+position = Vector2( 915, 60 )
+scale = Vector2( 210, 5 )
 
 [node name="HorizontalBorder13" parent="Borders" instance=ExtResource( 1 )]
-position = Vector2( 867.133, 448.713 )
+position = Vector2( 870, 450 )
 scale = Vector2( 300, 5 )
 
 [node name="HorizontalBorder2" parent="Borders" instance=ExtResource( 1 )]
-position = Vector2( 512, 0 )
-scale = Vector2( 1500, 5 )
+position = Vector2( 510, 0 )
+scale = Vector2( 1025, 5 )
 
 [node name="VerticalBorder1" parent="Borders" instance=ExtResource( 2 )]
-position = Vector2( 4.78332, 379.117 )
-scale = Vector2( 5, 1000 )
+position = Vector2( 0, 365 )
+scale = Vector2( 5, 730 )
 
 [node name="VerticalBorder3" parent="Borders" instance=ExtResource( 2 )]
-position = Vector2( 143.783, 342.117 )
-scale = Vector2( 5, 330 )
+position = Vector2( 145, 342.5 )
+scale = Vector2( 5, 335 )
 
 [node name="VerticalBorder4" parent="Borders" instance=ExtResource( 2 )]
-position = Vector2( 514.783, 359.117 )
-scale = Vector2( 5, 800 )
+position = Vector2( 510, 365 )
+scale = Vector2( 5, 730 )
 
 [node name="VerticalBorder8" parent="Borders" instance=ExtResource( 2 )]
-position = Vector2( 1014.78, 359.117 )
-scale = Vector2( 5, 850 )
+position = Vector2( 1020, 365 )
+scale = Vector2( 5, 730 )
 
 [node name="VerticalBorder5" parent="Borders" instance=ExtResource( 2 )]
-position = Vector2( 811.457, 105 )
-scale = Vector2( 5, 310 )
+position = Vector2( 810, 130 )
+scale = Vector2( 5, 260 )
 
 [node name="VerticalBorder6" parent="Borders" instance=ExtResource( 2 )]
-position = Vector2( 629.783, 110 )
-scale = Vector2( 5, 300 )
+position = Vector2( 630, 130 )
+scale = Vector2( 5, 260 )
 
 [node name="VerticalBorder9" parent="Borders" instance=ExtResource( 2 )]
-position = Vector2( 261.959, 660.869 )
-scale = Vector2( 5, 300 )
+position = Vector2( 260, 620 )
+scale = Vector2( 5, 220 )
 
 [node name="VerticalBorder7" parent="Borders" instance=ExtResource( 2 )]
-position = Vector2( 719.973, 423.23 )
+position = Vector2( 720, 425 )
 scale = Vector2( 5, 330 )
 
 [node name="Wall" parent="." instance=ExtResource( 6 )]
-position = Vector2( 4.78332, 389.117 )
-scale = Vector2( 5, 1000 )
+position = Vector2( -153.529, 317.236 )
+scale = Vector2( 5, 730 )
 
 [node name="Wall2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1014.78, 359.117 )
-scale = Vector2( 5, 850 )
+position = Vector2( 866.471, 317.236 )
+scale = Vector2( 5, 730 )
 
 [node name="PaintArea" parent="." instance=ExtResource( 3 )]
-position = Vector2( 262.923, 120.28 )
+position = Vector2( 109.394, 72.5155 )
 
 [node name="RedPaintArea" parent="." instance=ExtResource( 10 )]
-position = Vector2( 310.45, 339.791 )
+position = Vector2( 156.921, 292.027 )
 
 [node name="YellowPaintArea" parent="." instance=ExtResource( 7 )]
-position = Vector2( 849.16, 508.478 )
+position = Vector2( 695.631, 460.714 )
 
 [node name="YellowPaintArea2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 913.098, 157.5 )
+position = Vector2( 759.569, 109.736 )
 
 [node name="BluePaintArea" parent="." instance=ExtResource( 9 )]
-position = Vector2( 72.3839, 252.727 )
+position = Vector2( -81.1448, 204.963 )
 
 [node name="PaintArea2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 134.82, 673.547 )
+position = Vector2( -18.7087, 625.783 )
 
 [node name="PaintArea3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 90.6214, 448.87 )
+position = Vector2( -62.9073, 401.106 )
 
 [node name="PaintArea4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 85.7105, 486.93 )
+position = Vector2( -67.8182, 439.166 )
 
 [node name="PaintArea7" parent="." instance=ExtResource( 3 )]
-position = Vector2( 392.646, 645.308 )
+position = Vector2( 239.117, 597.544 )
 
 [node name="PaintArea8" parent="." instance=ExtResource( 3 )]
-position = Vector2( 797.801, 699.329 )
+position = Vector2( 644.272, 651.565 )
 
 [node name="PaintArea9" parent="." instance=ExtResource( 3 )]
-position = Vector2( 612.412, 480.791 )
+position = Vector2( 458.883, 433.027 )
 
 [node name="PaintArea10" parent="." instance=ExtResource( 3 )]
-position = Vector2( 603.818, 317.501 )
+position = Vector2( 450.289, 269.737 )
 
 [node name="PaintArea11" parent="." instance=ExtResource( 3 )]
-position = Vector2( 576.807, 134.568 )
+position = Vector2( 423.278, 86.8035 )
 
 [node name="PaintArea12" parent="." instance=ExtResource( 3 )]
-position = Vector2( 726.857, 54.6965 )
+position = Vector2( 573.328, 6.93203 )
 
 [node name="BlackPaintArea" parent="." instance=ExtResource( 8 )]
-position = Vector2( 955.089, 35.1112 )
+position = Vector2( 801.56, -12.6533 )
 
 [node name="BlackPaintArea2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 842, 349.423 )
+position = Vector2( 688.471, 301.659 )
 
 [node name="PaintArea14" parent="." instance=ExtResource( 3 )]
-position = Vector2( 724.82, 201.836 )
+position = Vector2( 571.291, 154.072 )
 
 [node name="BlueSplash" parent="." instance=ExtResource( 11 )]
-position = Vector2( 689.752, 67.6432 )
+position = Vector2( 536.223, 19.8787 )
 
 [node name="RedSplash" parent="." instance=ExtResource( 13 )]
-position = Vector2( 651.662, 641.723 )
+position = Vector2( 498.133, 593.959 )
 
 [node name="YellowSplash" parent="." instance=ExtResource( 12 )]
-position = Vector2( 877.485, 138.383 )
+position = Vector2( 723.956, 90.6185 )
 
 [node name="YellowSplash2" parent="." instance=ExtResource( 12 )]
-position = Vector2( 108.87, 562.821 )
+position = Vector2( -44.6587, 515.057 )
