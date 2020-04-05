@@ -1,3 +1,186 @@
-[gd_scene format=2]
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://scene/object/HorizontalBorder/HorizontalBorder.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scene/object/Character/Character.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene/object/VerticalBorder/VerticalBorder.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scene/level/5/Level5.gd" type="Script" id=4]
+[ext_resource path="res://scene/object/PaintArea/PaintArea.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scene/object/RedSplash/RedSplash.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scene/object/Wall/Wall.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scene/object/BluePaintArea/BluePaintArea.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scene/object/BlackPaintArea/BlackPaintArea.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scene/object/RedPaintArea/RedPaintArea.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scene/object/YellowPaintArea/YellowPaintArea.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scene/object/YellowSplash/YellowSplash.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scene/object/WhiteSplash/WhiteSplash.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scene/object/BlueSplash/BlueSplash.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scene/object/Bucket/Bucket.tscn" type="PackedScene" id=15]
 
 [node name="Level5" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="VerticalBorder" parent="." instance=ExtResource( 3 )]
+position = Vector2( -250, 285 )
+scale = Vector2( 5, 850 )
+
+[node name="VerticalBorder3" parent="." instance=ExtResource( 3 )]
+position = Vector2( -180, 285 )
+scale = Vector2( 5, 850 )
+
+[node name="VerticalBorder4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 30, 555 )
+scale = Vector2( 5, 310 )
+
+[node name="VerticalBorder7" parent="." instance=ExtResource( 3 )]
+position = Vector2( -5, 130 )
+scale = Vector2( 5, 540 )
+
+[node name="VerticalBorder8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 120, 57.5 )
+scale = Vector2( 5, 395 )
+
+[node name="VerticalBorder6" parent="." instance=ExtResource( 3 )]
+position = Vector2( -50, 555 )
+scale = Vector2( 5, 310 )
+
+[node name="VerticalBorder5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 145, 505 )
+scale = Vector2( 5, 210 )
+
+[node name="VerticalBorder2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 250, 285 )
+scale = Vector2( 5, 850 )
+
+[node name="Character" parent="." instance=ExtResource( 2 )]
+position = Vector2( 209.04, 673.033 )
+
+[node name="HorizontalBorder" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 710 )
+scale = Vector2( 505, 5 )
+
+[node name="HorizontalBorder2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, -140 )
+scale = Vector2( 505, 5 )
+
+[node name="HorizontalBorder3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 140, 610 )
+scale = Vector2( 220, 5 )
+
+[node name="HorizontalBorder7" parent="." instance=ExtResource( 1 )]
+position = Vector2( -115, 580 )
+scale = Vector2( 130, 5 )
+
+[node name="HorizontalBorder4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 197.5, 520 )
+scale = Vector2( 105, 5 )
+
+[node name="HorizontalBorder8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 122.5, 255 )
+scale = Vector2( 255, 5 )
+
+[node name="HorizontalBorder9" parent="." instance=ExtResource( 1 )]
+position = Vector2( -215, -25 )
+scale = Vector2( 70, 5 )
+
+[node name="HorizontalBorder12" parent="." instance=ExtResource( 1 )]
+position = Vector2( -215, 170 )
+scale = Vector2( 70, 5 )
+
+[node name="HorizontalBorder10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 57.5, -55 )
+scale = Vector2( 125, 5 )
+
+[node name="HorizontalBorder11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 57.5, 100 )
+scale = Vector2( 125, 5 )
+
+[node name="HorizontalBorder6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 35, 400 )
+scale = Vector2( 430, 5 )
+
+[node name="HorizontalBorder5" parent="." instance=ExtResource( 1 )]
+position = Vector2( -215, 670 )
+scale = Vector2( 70, 5 )
+
+[node name="PaintArea" parent="." instance=ExtResource( 5 )]
+position = Vector2( -227.123, -87.7885 )
+
+[node name="PaintArea2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 38.3259, 25.7301 )
+
+[node name="PaintArea3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 179.552, -20.3719 )
+
+[node name="PaintArea4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 53.4176, 188.402 )
+
+[node name="PaintArea5" parent="." instance=ExtResource( 5 )]
+position = Vector2( -218.756, 382.812 )
+
+[node name="RedSplash" parent="." instance=ExtResource( 6 )]
+position = Vector2( -73.9912, 248.611 )
+
+[node name="RedSplash2" parent="." instance=ExtResource( 6 )]
+position = Vector2( -224.217, 488.972 )
+
+[node name="RedSplash3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 95.6756, 538.458 )
+
+[node name="Wall" parent="." instance=ExtResource( 7 )]
+position = Vector2( -250, 285 )
+scale = Vector2( 5, 850 )
+
+[node name="Wall2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 250, 285 )
+scale = Vector2( 5, 850 )
+
+[node name="BlackPaintArea" parent="." instance=ExtResource( 9 )]
+position = Vector2( 61.9277, -116.597 )
+
+[node name="BlackPaintArea6" parent="." instance=ExtResource( 9 )]
+position = Vector2( -215.548, 61.9067 )
+
+[node name="BlackPaintArea2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 133.38, 312.448 )
+
+[node name="BlackPaintArea3" parent="." instance=ExtResource( 9 )]
+position = Vector2( -115.897, 503.437 )
+
+[node name="BlackPaintArea4" parent="." instance=ExtResource( 9 )]
+position = Vector2( -227.514, 690.704 )
+
+[node name="BlackPaintArea5" parent="." instance=ExtResource( 9 )]
+position = Vector2( 199.11, 566.686 )
+
+[node name="RedPaintArea" parent="." instance=ExtResource( 10 )]
+position = Vector2( -98.9723, 150.226 )
+
+[node name="RedPaintArea2" parent="." instance=ExtResource( 10 )]
+position = Vector2( -121.948, 632.716 )
+
+[node name="RedPaintArea3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 205.014, 466.584 )
+
+[node name="YellowPaintArea" parent="." instance=ExtResource( 11 )]
+position = Vector2( 86.6008, 491.327 )
+
+[node name="YellowPaintArea2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 144.924, 659.226 )
+
+[node name="BluePaintArea" parent="." instance=ExtResource( 8 )]
+position = Vector2( -10.6041, 606.205 )
+
+[node name="WhiteSplash" parent="." instance=ExtResource( 13 )]
+position = Vector2( -212.083, -98.9723 )
+
+[node name="YellowSplash" parent="." instance=ExtResource( 12 )]
+position = Vector2( 83.066, 24.743 )
+
+[node name="YellowSplash2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 30.045, 160.83 )
+
+[node name="BlueSplash" parent="." instance=ExtResource( 14 )]
+position = Vector2( 183.806, 104.274 )
+
+[node name="Bucket" parent="." instance=ExtResource( 15 )]
+position = Vector2( 197.945, 494.862 )
