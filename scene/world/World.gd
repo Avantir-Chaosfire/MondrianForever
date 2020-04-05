@@ -8,6 +8,7 @@ var titleClass = preload("res://scene/ui/Title/Title.tscn")
 var levelClasses = [
 	preload("res://scene/level/1/Level1.tscn"),
 	preload("res://scene/level/2/Level2.tscn"),
+	preload("res://scene/level/3/Level3.tscn"),
 ]
 
 onready var gui = get_node("GUI")
