@@ -27,6 +27,11 @@ func _physics_process(delta):
 	else:
 		processWalking(paintColours)
 		
+	if velocity.x < 0:
+		sprite.flip_h = true
+	elif velocity.x > 0:
+		sprite.flip_h = false
+		
 	var willCollide = test_move(transform, Vector2(0, velocity.y) * delta)
 	velocity = move_and_slide(velocity)
 	
