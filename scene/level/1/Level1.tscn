@@ -221,15 +221,30 @@ __meta__ = {
 }
 
 [node name="Instructions6" type="Label" parent="."]
-margin_left = 136.119
-margin_top = 403.015
-margin_right = 386.119
-margin_bottom = 474.015
+margin_left = 142.892
+margin_top = 68.4266
+margin_right = 392.892
+margin_bottom = 139.427
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Use the arrow keys or
 WASD to move"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instructions7" type="Label" parent="."]
+margin_left = 35.878
+margin_top = 344.767
+margin_right = 398.878
+margin_bottom = 452.767
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Jump through the >
+painting's bars onto >
+horizontal platforms >"
+align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }

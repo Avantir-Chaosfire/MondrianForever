@@ -8,6 +8,7 @@ onready var cantJumpSoundEffect = get_node("CantJumpSoundEffect")
 onready var landSoundEffect = get_node("LandSoundEffect")
 onready var swimSoundEffect = get_node("Swim2SoundEffect")
 onready var bucketPickupSoundEffect = get_node("BucketPickupSoundEffect")
+onready var walkAnimation = get_node("WalkAnimation")
 
 const acceleration = 100
 const maxMovementSpeed = 210
@@ -45,9 +46,21 @@ func _physics_process(delta):
 		onGround = false
 		
 	if onGround:
-		sprite.frame = 0
+		if velocity.length() > 0:
+			if not sprite.playing:
+				sprite.frame = 0
+				sprite.play()
+		else:
+			sprite.stop()
+			sprite.frame = 0
 	else:
-		sprite.frame = 1
+		if "blue" in paintColours:
+			if not sprite.playing:
+				sprite.frame = 0
+				sprite.play()
+		else:
+			sprite.stop()
+			sprite.frame = 1
 		
 func processSwimming():
 	applyHorizontalFriction()
