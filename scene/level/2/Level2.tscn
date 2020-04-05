@@ -40,7 +40,7 @@ position = Vector2( 765, 590 )
 scale = Vector2( 510, 5 )
 
 [node name="HorizontalBorder10" parent="Borders" instance=ExtResource( 1 )]
-position = Vector2( 255, 510 )
+position = Vector2( 255, 515 )
 scale = Vector2( 510, 5 )
 
 [node name="HorizontalBorder4" parent="Borders" instance=ExtResource( 1 )]
@@ -76,8 +76,8 @@ position = Vector2( 0, 365 )
 scale = Vector2( 5, 730 )
 
 [node name="VerticalBorder3" parent="Borders" instance=ExtResource( 2 )]
-position = Vector2( 145, 342.5 )
-scale = Vector2( 5, 335 )
+position = Vector2( 145, 345 )
+scale = Vector2( 5, 340 )
 
 [node name="VerticalBorder4" parent="Borders" instance=ExtResource( 2 )]
 position = Vector2( 510, 365 )
@@ -96,8 +96,8 @@ position = Vector2( 630, 130 )
 scale = Vector2( 5, 260 )
 
 [node name="VerticalBorder9" parent="Borders" instance=ExtResource( 2 )]
-position = Vector2( 260, 620 )
-scale = Vector2( 5, 220 )
+position = Vector2( 260, 623 )
+scale = Vector2( 5, 215 )
 
 [node name="VerticalBorder7" parent="Borders" instance=ExtResource( 2 )]
 position = Vector2( 720, 425 )
