@@ -18,7 +18,7 @@
 script = ExtResource( 5 )
 
 [node name="Character" parent="." instance=ExtResource( 4 )]
-position = Vector2( 725.067, 209.214 )
+position = Vector2( 718.947, 226.7 )
 
 [node name="Borders" type="Node2D" parent="."]
 

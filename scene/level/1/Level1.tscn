@@ -18,7 +18,7 @@
 script = ExtResource( 11 )
 
 [node name="Character" parent="." instance=ExtResource( 4 )]
-position = Vector2( 69.6524, 555.428 )
+position = Vector2( 371.29, 568.543 )
 
 [node name="Borders" type="Node2D" parent="."]
 
@@ -182,7 +182,7 @@ position = Vector2( 54.8279, 469.488 )
 position = Vector2( 634.52, 505.993 )
 
 [node name="RedSplash" parent="." instance=ExtResource( 13 )]
-position = Vector2( 598.796, 362.229 )
+position = Vector2( 1112.02, 141.902 )
 
 [node name="BlueSplash" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1012.13, 346.146 )
