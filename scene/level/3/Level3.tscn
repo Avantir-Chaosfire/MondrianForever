@@ -7,13 +7,13 @@
 [ext_resource path="res://scene/object/BlueSplash/BlueSplash.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scene/object/Wall/Wall.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scene/object/BlackPaintArea/BlackPaintArea.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scene/object/BluePaintArea/BluePaintArea.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scene/object/RedBucket/RedBucket.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scene/object/RedPaintArea/RedPaintArea.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scene/object/YellowPaintArea/YellowPaintArea.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scene/level/3/Level3.gd" type="Script" id=11]
 [ext_resource path="res://scene/object/YellowSplash/YellowSplash.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scene/object/RedSplash/RedSplash.tscn" type="PackedScene" id=13]
-[ext_resource path="res://scene/object/Bucket/Bucket.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scene/object/BlueBucket/BlueBucket.tscn" type="PackedScene" id=14]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 11 )
@@ -216,17 +216,17 @@ position = Vector2( 254.778, 500.591 )
 [node name="YellowSplash2" parent="." instance=ExtResource( 12 )]
 position = Vector2( 802.349, 464.987 )
 
-[node name="Bucket" parent="." instance=ExtResource( 14 )]
-position = Vector2( 782.074, 334.253 )
-
-[node name="Bucket2" parent="." instance=ExtResource( 14 )]
-position = Vector2( 648.395, 464.018 )
-
 [node name="BlueSplash" parent="." instance=ExtResource( 5 )]
 position = Vector2( 224.085, 352.035 )
 
-[node name="BluePaintArea" parent="." instance=ExtResource( 8 )]
-position = Vector2( 666.05, 248.446 )
+[node name="BlueBucket" parent="." instance=ExtResource( 14 )]
+position = Vector2( 781.537, 333.826 )
 
-[node name="RedPaintArea3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 684.886, 456.756 )
+[node name="RedBucket" parent="." instance=ExtResource( 8 )]
+position = Vector2( 651.577, 461.981 )
+
+[node name="PaintArea6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 658.797, 246.283 )
+
+[node name="PaintArea11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 732.802, 462.884 )
