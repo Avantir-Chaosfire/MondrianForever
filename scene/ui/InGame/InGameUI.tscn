@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scene/ui/InGame/InGameUI.gd" type="Script" id=1]
 [ext_resource path="res://sound/bucket/empty.wav" type="AudioStream" id=2]
@@ -7,6 +7,12 @@
 [ext_resource path="res://image/restart/normal.png" type="Texture" id=5]
 [ext_resource path="res://image/restart/hover.png" type="Texture" id=6]
 [ext_resource path="res://scene/ui/InGame/RestartButton.gd" type="Script" id=7]
+[ext_resource path="res://image/music/unmute/pressed.png" type="Texture" id=8]
+[ext_resource path="res://image/music/mute/pressed.png" type="Texture" id=9]
+[ext_resource path="res://image/music/mute/normal.png" type="Texture" id=10]
+[ext_resource path="res://image/music/unmute/hover.png" type="Texture" id=11]
+[ext_resource path="res://image/music/mute/hover.png" type="Texture" id=12]
+[ext_resource path="res://image/music/unmute/normal.png" type="Texture" id=13]
 
 [node name="InGameUI" type="Control"]
 anchor_right = 1.0
@@ -37,4 +43,30 @@ script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="MuteButton" type="TextureButton" parent="."]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -290.0
+margin_top = 8.0
+margin_right = -223.0
+margin_bottom = 80.0
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 12 )
+
+[node name="UnmuteButton" type="TextureButton" parent="."]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -290.0
+margin_top = 8.0
+margin_right = -223.0
+margin_bottom = 80.0
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 11 )
 [connection signal="pressed" from="RestartButton" to="." method="_on_RestartButton_pressed"]
+[connection signal="pressed" from="MuteButton" to="." method="_on_MuteButton_pressed"]
+[connection signal="pressed" from="UnmuteButton" to="." method="_on_UnmuteButton_pressed"]

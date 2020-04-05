@@ -8,11 +8,22 @@ var blueBucketButtonClass = preload("res://scene/ui/BlueBucketButton/BlueBucketB
 onready var world = get_node("../..")
 onready var fillBucketSoundEffect = get_node("FillBucketSound")
 onready var emptyBucketSoundEffect = get_node("EmptyBucketSound")
+onready var music = get_node("../../Music")
+onready var muteButton = get_node("MuteButton")
+onready var unmuteButton = get_node("UnmuteButton")
 
 const buttonMarginSize = 15
 const buttonSpacing = 52
 
 var bucketCount = 0
+
+func _process(_delta):
+	if music.stream_paused:
+		muteButton.visible = false
+		unmuteButton.visible = true
+	else:
+		muteButton.visible = true
+		unmuteButton.visible = false
 
 func setAvailableBuckets(amount):
 	bucketCount = amount
@@ -61,3 +72,9 @@ func addBucket(paintColour):
 
 func _on_RestartButton_pressed():
 	world.restartLevel()
+
+func _on_MuteButton_pressed():
+	music.stream_paused = true
+
+func _on_UnmuteButton_pressed():
+	music.stream_paused = false
