@@ -18,132 +18,132 @@
 script = ExtResource( 8 )
 
 [node name="VerticalBorder" parent="." instance=ExtResource( 3 )]
-position = Vector2( 272.125, 431.802 )
+position = Vector2( 430, 270 )
 scale = Vector2( 5, 650 )
 
 [node name="VerticalBorder3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 494.466, 435.421 )
+position = Vector2( 655, 270 )
 scale = Vector2( 5, 650 )
 
 [node name="VerticalBorder4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 338.373, 431.802 )
+position = Vector2( 500, 270 )
 scale = Vector2( 5, 650 )
 
 [node name="VerticalBorder5" parent="." instance=ExtResource( 3 )]
-position = Vector2( 712.59, 433.172 )
+position = Vector2( 875, 270 )
 scale = Vector2( 5, 650 )
 
 [node name="VerticalBorder6" parent="." instance=ExtResource( 3 )]
-position = Vector2( 547.054, 312.607 )
-scale = Vector2( 5, 650 )
+position = Vector2( 710, 210 )
+scale = Vector2( 5, 530 )
 
 [node name="VerticalBorder7" parent="." instance=ExtResource( 3 )]
-position = Vector2( 940.984, 313.097 )
-scale = Vector2( 5, 650 )
+position = Vector2( 1100, 210 )
+scale = Vector2( 5, 530 )
 
 [node name="VerticalBorder8" parent="." instance=ExtResource( 3 )]
-position = Vector2( 764.445, 199.668 )
-scale = Vector2( 5, 650 )
+position = Vector2( 925, 155 )
+scale = Vector2( 5, 420 )
 
 [node name="VerticalBorder2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1063.76, 431.802 )
+position = Vector2( 1230, 270 )
 scale = Vector2( 5, 650 )
 
 [node name="Wall" parent="." instance=ExtResource( 4 )]
-position = Vector2( 272.125, 434.051 )
+position = Vector2( 430, 270 )
 scale = Vector2( 5, 650 )
 
 [node name="Wall2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1063.76, 431.802 )
+position = Vector2( 1230, 270 )
 scale = Vector2( 5, 650 )
 
 [node name="HorizontalBorder" parent="." instance=ExtResource( 2 )]
-position = Vector2( 667.944, 753.405 )
+position = Vector2( 830, 595 )
 scale = Vector2( 800, 5 )
 
 [node name="HorizontalBorder3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 894.617, 635.579 )
-scale = Vector2( 800, 5 )
+position = Vector2( 942.5, 475 )
+scale = Vector2( 575, 5 )
 
 [node name="HorizontalBorder4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1114.21, 524.5 )
-scale = Vector2( 800, 5 )
+position = Vector2( 1052.5, 365 )
+scale = Vector2( 355, 5 )
 
 [node name="HorizontalBorder5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1338.03, 423.296 )
-scale = Vector2( 800, 5 )
+position = Vector2( 1165, 265 )
+scale = Vector2( 130, 5 )
 
 [node name="HorizontalBorder6" parent="." instance=ExtResource( 2 )]
-position = Vector2( 518.806, 274.558 )
-scale = Vector2( 50, 5 )
+position = Vector2( 682.5, 115 )
+scale = Vector2( 55, 5 )
 
 [node name="HorizontalBorder7" parent="." instance=ExtResource( 2 )]
-position = Vector2( 739.399, 324.077 )
+position = Vector2( 900, 165 )
 scale = Vector2( 50, 5 )
 
 [node name="HorizontalBorder2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 665.695, 105.702 )
-scale = Vector2( 800, 5 )
+position = Vector2( 830, -55 )
+scale = Vector2( 805, 5 )
 
 [node name="Character" parent="." instance=ExtResource( 5 )]
-position = Vector2( 312.607, 701.678 )
+position = Vector2( 610.181, 545.468 )
 
 [node name="BluePaintArea" parent="." instance=ExtResource( 6 )]
-position = Vector2( 312.607, 362.084 )
+position = Vector2( 472.781, 201.91 )
 
 [node name="BluePaintArea2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 528.813, 221.782 )
+position = Vector2( 688.987, 61.6082 )
 
 [node name="BluePaintArea3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 744.444, 180.403 )
+position = Vector2( 904.618, 20.2292 )
 
 [node name="RedPaintArea" parent="." instance=ExtResource( 1 )]
-position = Vector2( 407.063, 285.619 )
+position = Vector2( 567.237, 125.445 )
 
 [node name="RedPaintArea2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 591.479, 283.37 )
+position = Vector2( 751.653, 123.196 )
 
 [node name="RedPaintArea4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 518.191, 552.091 )
+position = Vector2( 678.365, 391.917 )
 
 [node name="RedPaintArea5" parent="." instance=ExtResource( 1 )]
-position = Vector2( 745.034, 466.589 )
+position = Vector2( 905.208, 306.415 )
 
 [node name="RedPaintArea3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 843.669, 297.8 )
+position = Vector2( 1003.84, 137.626 )
 
 [node name="BlueSplash" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1012.07, 294.895 )
+position = Vector2( 1172.24, 134.721 )
 
 [node name="BlueSplash2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 742.539, 431.612 )
+position = Vector2( 902.713, 271.438 )
 
 [node name="BlueSplash3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 513.376, 496.715 )
+position = Vector2( 673.55, 336.541 )
 
 [node name="PaintArea" parent="." instance=ExtResource( 7 )]
-position = Vector2( 877.706, 696.232 )
+position = Vector2( 1037.88, 536.058 )
 
 [node name="PaintArea2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1016.12, 351.387 )
+position = Vector2( 1176.29, 191.213 )
 
 [node name="BlackPaintArea" parent="." instance=ExtResource( 10 )]
-position = Vector2( 612.474, 708.446 )
+position = Vector2( 772.648, 548.272 )
 
 [node name="BlackPaintArea2" parent="." instance=ExtResource( 10 )]
-position = Vector2( 1003.34, 474.624 )
+position = Vector2( 1163.51, 314.45 )
 
 [node name="BlackPaintArea3" parent="." instance=ExtResource( 10 )]
-position = Vector2( 828.847, 575.831 )
+position = Vector2( 989.021, 415.657 )
 
 [node name="YellowPaintArea" parent="." instance=ExtResource( 11 )]
-position = Vector2( 1017.3, 581.066 )
+position = Vector2( 1177.47, 420.892 )
 
 [node name="Bucket" parent="." instance=ExtResource( 12 )]
-position = Vector2( 999.844, 397.075 )
+position = Vector2( 1160.02, 236.901 )
 
 [node name="WhiteSplash" parent="." instance=ExtResource( 13 )]
-position = Vector2( 889.333, 429.798 )
+position = Vector2( 1049.51, 269.624 )
 
 [node name="WhiteSplash2" parent="." instance=ExtResource( 13 )]
-position = Vector2( 310.458, 412.727 )
+position = Vector2( 470.632, 252.553 )
