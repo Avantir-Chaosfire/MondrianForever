@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://image/victory/victory.png" type="Texture" id=1]
 [ext_resource path="res://image/restart/hover.png" type="Texture" id=2]
 [ext_resource path="res://image/restart/pressed.png" type="Texture" id=3]
 [ext_resource path="res://image/restart/normal.png" type="Texture" id=4]
 [ext_resource path="res://scene/ui/FinalVictory/FinalVictory.gd" type="Script" id=5]
+[ext_resource path="res://scene/ui/FinalVictory/RestartButton.gd" type="Script" id=6]
 
 [node name="FinalVictory" type="Control"]
 anchor_left = 0.5
@@ -42,6 +43,7 @@ margin_bottom = 210.673
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 2 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -6,9 +6,8 @@ func _on_NextPaintingButton_pressed():
 	advanceLevel()
 
 func _process(_delta):
-	pass
-#	if Input.is_action_just_released("next_level"):
-#		advanceLevel()
+	if Input.is_action_just_released("next_level"):
+		advanceLevel()
 		
 func advanceLevel():
 	world.advanceLevel()
