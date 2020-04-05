@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scene/object/HorizontalBorder/HorizontalBorder.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scene/object/VerticalBorder/VerticalBorder.tscn" type="PackedScene" id=2]
@@ -13,6 +13,11 @@
 [ext_resource path="res://scene/level/1/Level1.gd" type="Script" id=11]
 [ext_resource path="res://scene/object/YellowSplash/YellowSplash.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scene/object/RedSplash/RedSplash.tscn" type="PackedScene" id=13]
+[ext_resource path="res://font/comic_sans.ttf" type="DynamicFontData" id=14]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 14 )
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 11 )
@@ -186,3 +191,86 @@ position = Vector2( 1112.02, 141.902 )
 
 [node name="BlueSplash" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1012.13, 346.146 )
+
+[node name="Instructions1" type="Label" parent="."]
+margin_left = -197.556
+margin_top = 373.525
+margin_right = -12.5564
+margin_bottom = 444.525
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "In a yellow tile,
+you jump higher!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instructions2" type="Label" parent="."]
+margin_left = 452.328
+margin_top = 295.623
+margin_right = 624.328
+margin_bottom = 366.623
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "You can swim in
+blue tiles!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instructions6" type="Label" parent="."]
+margin_left = 136.119
+margin_top = 403.015
+margin_right = 386.119
+margin_bottom = 474.015
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Use the arrow keys or
+WASD to move"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instructions3" type="Label" parent="."]
+margin_left = 833.373
+margin_top = 236.649
+margin_right = 954.373
+margin_bottom = 344.649
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "You can't
+jump in
+red tiles."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instructions4" type="Label" parent="."]
+margin_left = 511.198
+margin_top = -39.785
+margin_right = 1192.2
+margin_bottom = 35.215
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Fill the tiles with the colour of the splash to finish the level."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instructions5" type="Label" parent="."]
+margin_left = -210.713
+margin_top = -139.222
+margin_right = 470.287
+margin_bottom = -64.2218
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Use your buckets to collect colours and
+splash them somewhere else"
+__meta__ = {
+"_edit_use_anchors_": false
+}

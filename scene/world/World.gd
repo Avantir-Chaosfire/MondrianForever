@@ -38,8 +38,6 @@ func _process(_delta):
 	if inGame and not gameComplete:
 		if Input.is_action_just_released("restart_level"):
 			restartLevel()
-		elif Input.is_action_just_released("skip_level") and not victorious:
-			advanceLevel()
 			
 		if not victorious:
 			var satisfiesVictoryCondition = true
