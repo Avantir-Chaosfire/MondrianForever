@@ -45,9 +45,18 @@ func addButton(button, hotkey, position):
 	button.hotkey = hotkey
 	add_child(button)
 
-func addBucket():
+func addBucket(paintColour):
 	var hotkey = "bucket_" + str(bucketCount + 1)
-	addButton(emptyBucketButtonClass.instance(), hotkey, Vector2(buttonMarginSize + (buttonSpacing * bucketCount), buttonMarginSize))
+	var bucket = null
+	if paintColour == "white":
+		bucket = emptyBucketButtonClass.instance()
+	elif paintColour == "red":
+		bucket = redBucketButtonClass.instance()
+	elif paintColour == "blue":
+		bucket = blueBucketButtonClass.instance()
+	elif paintColour == "yellow":
+		bucket = yellowBucketButtonClass.instance()
+	addButton(bucket, hotkey, Vector2(buttonMarginSize + (buttonSpacing * bucketCount), buttonMarginSize))
 	bucketCount += 1
 
 func _on_RestartButton_pressed():

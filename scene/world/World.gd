@@ -103,5 +103,5 @@ func createInGameUI():
 	inGameUI.setAvailableBuckets(currentLevel.availableBucketCount)
 	gui.add_child(inGameUI)
 	
-func addBucket():
-	inGameUI.addBucket()
+func addBucket(paintColour):
+	inGameUI.addBucket(paintColour)

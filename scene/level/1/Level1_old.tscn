@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scene/object/RedSplash/RedSplash.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scene/object/HorizontalBorder/HorizontalBorder.tscn" type="PackedScene" id=2]
@@ -14,6 +14,9 @@
 [ext_resource path="res://scene/object/BluePaintArea/BluePaintArea.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scene/object/RedPaintArea/RedPaintArea.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scene/level/1/Level1_old.gd" type="Script" id=14]
+[ext_resource path="res://scene/object/YellowBucket/YellowBucket.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scene/object/BlueBucket/BlueBucket.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scene/object/RedBucket/RedBucket.tscn" type="PackedScene" id=17]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 14 )
@@ -92,3 +95,12 @@ position = Vector2( 583.192, 155.97 )
 
 [node name="Bucket" parent="." instance=ExtResource( 7 )]
 position = Vector2( 973.117, 120.368 )
+
+[node name="RedBucket" parent="." instance=ExtResource( 17 )]
+position = Vector2( 351.373, 445.596 )
+
+[node name="BlueBucket" parent="." instance=ExtResource( 16 )]
+position = Vector2( 259.113, 447.559 )
+
+[node name="YellowBucket" parent="." instance=ExtResource( 15 )]
+position = Vector2( 166.853, 449.522 )

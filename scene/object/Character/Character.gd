@@ -124,6 +124,6 @@ func _on_SwimSoundTimer_timeout():
 	if "blue" in getOverlappingPaintColours():
 		swimSoundEffect.play()
 		
-func collectBucket():
+func collectBucket(paintColour):
 	bucketPickupSoundEffect.play()
-	world.addBucket()
+	world.addBucket(paintColour)
