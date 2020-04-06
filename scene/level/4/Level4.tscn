@@ -183,3 +183,6 @@ position = Vector2( 441.16, 36.4399 )
 
 [node name="PaintArea14" parent="." instance=ExtResource( 3 )]
 position = Vector2( 473.826, -33.0937 )
+
+[node name="PaintArea" parent="." instance=ExtResource( 3 )]
+position = Vector2( 545.169, 170.921 )
